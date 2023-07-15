@@ -12,13 +12,13 @@ export class AppController {
   }
 
   @Get("url")
-  getUrl(@Req() req: Request, @IpAddress() ipAddress): any {
+  getUrl(@Req() req: Request): any {
     const protocol = req.protocol;
     const host = req.get("Host");
     const originUrl = req.originalUrl;
     const fullUrl = protocol + host + originUrl;
-    console.log('ipAddress', ipAddress)
+    console.log('IP', req.ip)
     console.log('fullUrl', protocol + host + originUrl)
-   return {fullUrl, ipAddress}
+   return {fullUrl, ip: req.ip}
   }
 }
