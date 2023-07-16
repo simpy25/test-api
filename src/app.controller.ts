@@ -1,4 +1,4 @@
-import {Controller, Get, Req} from '@nestjs/common';
+import {Controller, Get, Req, Ip} from '@nestjs/common';
 import { AppService } from './app.service';
 import {Request} from 'express';
 import {IpAddress} from "./dec";
@@ -12,13 +12,14 @@ export class AppController {
   }
 
   @Get("url")
-  getUrl(@Req() req: Request): any {
+  getUrl(@Req() req: Request, @Ip() ip): any {
     const protocol = req.protocol;
     const host = req.get("Host");
     const originUrl = req.originalUrl;
     const fullUrl = protocol + host + originUrl;
     console.log('IP', req.ip)
+    console.log('IP2', ip)
     console.log('fullUrl', protocol + host + originUrl)
-   return {fullUrl, ip: req.ip}
+   return {fullUrl, ip: req.ip, ip2: ip}
   }
 }
