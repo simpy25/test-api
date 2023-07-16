@@ -15,11 +15,14 @@ export class AppController {
   getUrl(@Req() req: Request, @Ip() ip): any {
     const protocol = req.protocol;
     const host = req.get("Host");
+    const ipAddress = req.header('x-forwarded-for') ||
+        req.socket.remoteAddress;
+    console.log('ipAddress', ipAddress)
     const originUrl = req.originalUrl;
     const fullUrl = protocol + host + originUrl;
     console.log('IP', req.ip)
     console.log('IP2', ip)
     console.log('fullUrl', protocol + host + originUrl)
-   return {fullUrl, ip: req.ip, ip2: ip}
+   return {fullUrl, ip: req.ip, ip2: ip, ipAddress}
   }
 }
