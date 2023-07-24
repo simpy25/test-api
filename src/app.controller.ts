@@ -25,7 +25,7 @@ export class AppController {
     // console.log('IP', req.ip)
     // console.log('IP2', ip)
     // console.log('fullUrl', protocol + host + originUrl)
-    return {"ROOM":{"ID":"1C4021","BedName":"1C-402-1","PatientName":"Forharrisoneonly Donotuse","attendingphys":"WPH-Physician Generic","attendingphysprefix":"Dr.","attendingphysdegree":"MD","primaryRN":"integretED Primary RN","secondRN":"integretED Secondary RN","event1Time":"202307040945","e1-appointmentName":"X-Ray Clinic","event2Time":"202307051045","e2-appointmentName":"Rehab Plus","event3Time":"202307051245","e3-appointmentName":"MSK Clinic", "event4Time":"202307051145","e4-appointmentName":"Howdy"}}
+    return {"ROOM":{"ID":"1C4021","BedName":"1C-402-1","PatientName":"Forharrisoneonly Donotuse","attendingphys":"WPH-Physician Generic","attendingphysprefix":"Dr.","attendingphysdegree":"MD","primaryRN":"integretED Primary RN","secondRN":"integretED Secondary RN","event1Time":"202307242145","e1-appointmentName":"X-Ray Clinic","event2Time":"202307242245","e2-appointmentName":"Rehab Plus","event3Time":"202307242345","e3-appointmentName":"MSK Clinic", "event4Time":"202307241145","e4-appointmentName":"Howdy"}}
 
   }
 }
